@@ -209,7 +209,7 @@ button#form-submit {
     letter-spacing: 2px;
 }
 /* ----media queries---- */
- /* --tablet-- */
+ /* --tablet responsive-- */
  @media only screen and (min-width:689px) and (max-width:1025px){
     .container{
         width:90%;
@@ -247,5 +247,67 @@ button#form-submit {
     a#button, #log-button{
         font-size:14px;
         width:110px;
+    }
+}
+/* mobile responsive */
+@media only screen and (max-width:688px){
+    .container{
+        width:90%;
+        padding:10% 5%;
+    }
+    .banner-grid{
+        grid-template-columns: 100%;
+    }
+    .right-banner img{
+        width:100%;
+        margin-top: 50px;
+    }
+    .left-banner h1{
+        font-size: 35px;
+        width: 100%;
+    }
+    a#button, #log-button{
+        font-size:16px;
+        width:120px;
+    }
+    .articles{
+        grid-template-columns:1fr;
+    }
+    .highlights{
+        grid-template-columns:100%;
+    }
+    .left-highlight h2{
+        font-size:35px;
+        margin:0px;
+    }
+    .left-highlight p{
+        margin:15px 0px;
+        font-size:20px;
+    }
+    .right-highlight img{
+        height:100%;
+        margin-top:50px;
+    }
+    .contact-head h2{
+        font-size:30px;
+        margin:10px;
+    }
+    form.contact-form, .subscribe {
+    padding: 0% 2%;
+    }
+    .input-grid{
+        grid-template-columns:100%;
+        gap:0;
+    }
+    form.contact-form input, textarea, #form-submit{
+        width: 90%;
+        padding: 3% 2%;
+        margin: 3.5% 2%;
+    }
+    button#form-submit{
+        width: 96%;
+    }
+    form.subscribe #s-email, form.subscribe button#s-submit{
+        padding:10px;
     }
 }
