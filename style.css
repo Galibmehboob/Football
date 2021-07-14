@@ -1,4 +1,4 @@
-/* COMMON CSS */
+
 body{
     margin:0px;
     font-family: poppins;
@@ -6,22 +6,18 @@ body{
 a{
     text-decoration: none;
 }
-.container {
-    padding: 80px 10px;
-    width: 1200px;
-    margin: auto;
-}
-a#button,#log-button {
+
+a#button,#logbutton {
     width: 125px;
     color: white;
     background-color: #fa6108;
     padding: 10px 24px;
     border-radius: 4px;
 }
-a#button i,#log-button i {
+a#button i,#logbutton i {
     margin:0px 5px;
 }
-a#button:hover,#log-button:hover {
+a#button:hover,#logbutton:hover {
     transition: 1s;
     background-color: white;
     color: black;
@@ -31,13 +27,13 @@ a#button:hover i {
     position: relative;
     left: 10px;
 }
-a#log-button:hover i{
+a#logbutton:hover i{
     position: relative;
     right: 10px;
 }
-/* HEADER-CSS-START */
+
 header.site-header {
-    background-color: #25a054;
+    background-color: #74c6fd;
 }
 .header-container {
     padding: 30px 10px;
@@ -61,7 +57,7 @@ nav.site-nav ul li a {
     margin-right: 20px;
 }
 
-/* TOP-BANNER-SECTION-CSS-START */
+
 section.top-banner {
     background-color: #2598a0;
 }
@@ -84,21 +80,28 @@ section.top-banner {
     font-weight: 700;
     margin-top: 0;
     margin-bottom: 30px;
+
 }
-/* BLOG-SECTION-CSS-START */
+.container {
+    padding: 80px 10px;
+    width: 1200px;
+    margin: auto;
+}
+
 .articles {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 35px;
 }
 .article {
-    box-shadow: #0000002e 0px 0px 10px;
-    padding: 14px;
-    border-radius: 4px;
+    box-shadow: #000000 0px 0px 20px;
+    padding: 16px;
+    border-radius: 10px;
+
 }
 article.article img {
     width: 100%;
-    border-radius: 4px;
+    border-radius: 10px;
 }
 .article-head h2 {
     font-size: 28px;
@@ -110,7 +113,7 @@ p.article-details {
     font-weight: 400;
     line-height: 26px;
 }
-/* HIGHLIGHTS-SECTION-CSS-START */
+
 .highlights {
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -136,8 +139,10 @@ p.article-details {
 }
 .right-highlight img {
     width: 100%;
+    box-shadow: #000000 0px 0px 20px;
+    border-radius: 10px;
 }
-/* FOOTER-CSS-START */
+
 footer.site-footer {
     padding-top: 80px;
     padding-bottom: 40px;
@@ -152,13 +157,100 @@ footer.site-footer {
     height: auto;
 }
 .ft-icons i {
-    color: #2456fa;
-    background-color: #E7E7E8;
+    color: #fd0a0a;
+    background-color: #d3d3d6;
     padding: 10px;
     font-size: 22px;
     margin: 5px 10px;
     border-radius: 100%;
+    
 }
 .ft-copyright {
     font-size: 18px;
 }
+
+.contact-head h2 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 900;
+}
+form.contact-form {
+    padding: 1% 15%;
+}
+form.contact-form input, textarea ,#form-submit{
+    display: block;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    border: 4px solid #000000;
+    border-radius: 10px;
+    box-shadow: #022d5c2e 0px 0px 20px;
+}
+.input-grid {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 200px;
+}
+form.contact-form input::placeholder, textarea::placeholder,#form-submit,#s-email::placeholder{
+    font-size: 15px;
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+button#form-submit:hover,button#s-submit:hover {
+    background-color: #46c0f8;
+    color: white;
+    transition: 0.2s;
+}
+button#form-submit {
+    width: 103.5%;
+    margin-top: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+/* ----media queries---- */
+ /* --tablet-- */
+ @media only screen and (min-width:689px) and (max-width:1025px){
+    .container{
+        width:90%;
+        margin:auto;
+        padding:5% 5%;
+    }
+    .right-banner{
+        text-align:right;
+    }
+    .left-banner h1{
+        font-size:40px;
+    }
+    .articles{
+        grid-template-columns:repeat(2,1fr);
+    }
+    p.article-details{
+        font-size:20px;
+    }
+    .left-highlight h2{
+        font-size:30px;
+        margin-bottom:0px;
+
+    }
+    .left-highlight p{
+        margin:15px 0px;
+        font-size:20px;
+    }
+    .right-highlight img{
+        height:100%;
+    }
+    .contact-head h2{
+        margin:2%;
+        font-size:40px
+    }
+    a#button, #log-button{
+        font-size:14px;
+        width:110px;
+    }
+}
+
+
+}
+     
+ }
